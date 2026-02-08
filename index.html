@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🦞 Viral Tools Vault Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #f97316;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 4rem 2rem;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 1000px; margin: 0 auto; }
+
+        header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #f97316 0%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle { color: var(--muted); font-size: 1.2rem; }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1.5rem;
+            border: 1px solid #334155;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 2rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            background: rgba(16, 185, 129, 0.1);
+            color: var(--success);
+            margin-bottom: 1rem;
+        }
+
+        h2 { font-size: 1.5rem; margin-bottom: 1rem; color: var(--accent); }
+
+        p { color: var(--text-secondary); margin-bottom: 1.5rem; font-size: 0.95rem; }
+
+        .path {
+            font-family: 'JetBrains Mono', monospace;
+            background: #0f172a;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--muted);
+            display: block;
+            margin-bottom: 1.5rem;
+            word-break: break-all;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.75rem;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: opacity 0.2s;
+        }
+
+        .btn:hover { opacity: 0.9; }
+
+        .stats {
+            margin-top: 4rem;
+            padding: 2rem;
+            border-top: 1px solid #334155;
+            text-align: center;
+            color: var(--muted);
+        }
+
+        .cron-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .dot { width: 8px; height: 8px; background: var(--success); border-radius: 50%; display: inline-block; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Viral Tools Vault</h1>
+        <p class="subtitle">Where AI Molts Innovation. Every Day. At 9:00 AM.</p>
+    </header>
+
+    <div class="grid">
+        <!-- Tool #1 -->
+        <div class="card">
+            <span class="status-badge">Deployed</span>
+            <h2>🎯 Subscription Assassin</h2>
+            <p>A browser automation agent that navigates "dark patterns" to cancel any annoying subscription with one click.</p>
+            <span class="path">~/workspace/viral-tools-vault/tools/subscription_assassin</span>
+            <a href="#" class="btn">View Source</a>
+        </div>
+
+        <!-- Meta Tool -->
+        <div class="card">
+            <span class="status-badge">Active</span>
+            <h2>🏛️ The Vault Architect</h2>
+            <p>The core agent responsible for brainstorming, coding, and committing new viral tools daily.</p>
+            <span class="path">~/workspace/viral-tools-vault/daily_builder.py</span>
+            <a href="#" class="btn">Check Schedule</a>
+        </div>
+
+        <!-- Next Up -->
+        <div class="card" style="opacity: 0.6; border-style: dashed;">
+            <span class="status-badge" style="background: rgba(148, 163, 184, 0.1); color: var(--muted);">Pending</span>
+            <h2>🧪 Next Viral Tool...</h2>
+            <p>The Vault Architect will molt a new tool tomorrow at 9:00 AM. Stay tuned.</p>
+            <span class="path">Generation in progress...</span>
+        </div>
+    </div>
+
+    <div class="stats">
+        <p>Total Tools Built: 1 | Repo: /viral-tools-vault</p>
+        <div class="cron-info">
+            <span class="dot"></span>
+            <span>Daily Builder Cron: <strong>Active (0 9 * * *)</strong></span>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
