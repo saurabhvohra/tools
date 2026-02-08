@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎯 Subscription Assassin | Viral Tools Vault</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --accent: #f97316;
+            --text: #f8fafc;
+            --muted: #94a3b8;
+            --success: #10b981;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            padding: 4rem 2rem;
+            line-height: 1.6;
+        }
+
+        .container { max-width: 800px; margin: 0 auto; }
+
+        .back-link {
+            color: var(--muted);
+            text-decoration: none;
+            display: inline-block;
+            margin-bottom: 2rem;
+            font-weight: 600;
+        }
+
+        .back-link:hover { color: var(--accent); }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .description { font-size: 1.2rem; color: var(--text-secondary); margin-bottom: 3rem; }
+
+        .terminal {
+            background: #000;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            font-family: 'JetBrains Mono', monospace;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            margin-bottom: 3rem;
+            border: 1px solid #334155;
+        }
+
+        .terminal-header {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .dot { width: 12px; height: 12px; border-radius: 50%; }
+        .red { background: #ff5f56; }
+        .yellow { background: #ffbd2e; }
+        .green { background: #27c93f; }
+
+        .command { color: var(--success); margin-bottom: 0.5rem; display: block; }
+        .comment { color: var(--muted); }
+
+        .step-card {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 1.5rem;
+            border: 1px solid #334155;
+        }
+
+        .step-card h3 { margin-bottom: 1rem; color: var(--accent); display: flex; align-items: center; gap: 0.5rem; }
+
+        .btn-large {
+            display: block;
+            text-align: center;
+            background: var(--accent);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 1rem;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.2rem;
+            margin-top: 3rem;
+            transition: transform 0.2s;
+        }
+
+        .btn-large:hover { transform: scale(1.02); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="../../index.html" class="back-link">← Back to Vault</a>
+    
+    <h1>Subscription Assassin 🎯</h1>
+    <p class="description">Stop wasting hours trying to find the "Cancel" button. Let an AI-powered agent do the dirty work for you.</p>
+
+    <div class="terminal">
+        <div class="terminal-header">
+            <div class="dot red"></div>
+            <div class="dot yellow"></div>
+            <div class="dot green"></div>
+        </div>
+        <span class="comment"># Deploy the assassin to any service</span>
+        <span class="command">$ assassin --target "Adobe" --email "user@example.com"</span>
+        <br>
+        <span class="comment"># Output:</span>
+        <span>🕵️ Assassin deployed to Adobe...</span>
+        <span>✅ Navigated to Billing Settings</span>
+        <span>✅ Bypassed "Stay for 50% discount" popup</span>
+        <span>✅ Bypassed "Are you sure?" survey</span>
+        <span style="color: var(--success)">🎯 Target eliminated. Subscription cancelled.</span>
+    </div>
+
+    <div class="step-card">
+        <h3>1. Install the Tool</h3>
+        <p>This is a local automation tool powered by Playwright. You need Python installed on your machine.</p>
+        <code style="display: block; background: #0f172a; padding: 1rem; border-radius: 0.5rem; margin-top: 1rem;">pip install playwright-assassin</code>
+    </div>
+
+    <div class="step-card">
+        <h3>2. Choose Your Target</h3>
+        <p>The assassin currently supports **Adobe, Netflix, NYT, Amazon Prime, and LinkedIn**.</p>
+    </div>
+
+    <div class="step-card">
+        <h3>3. Execute</h3>
+        <p>Run the command and watch the AI navigate the dark patterns for you in a controlled browser window.</p>
+    </div>
+
+    <a href="https://github.com/saurabhvohra/tools" class="btn-large">Get the Source Code on GitHub</a>
+</div>
+
+</body>
+</html>
