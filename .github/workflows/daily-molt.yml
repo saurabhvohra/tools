@@ -1,0 +1,28 @@
+name: Daily Tool Molting
+
+on:
+  schedule:
+    - cron: '0 14 * * *' # 9:00 AM EST (EST is UTC-5, so 14:00 UTC)
+  workflow_dispatch: # Allows manual triggering
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+      - name: Generate New Viral Tool
+        run: |
+          # The agent would normally do this, but here we run a script
+          # that chooses a template and molts a new tool.
+          python3 daily_builder.py
+      - name: Commit and Push
+        run: |
+          git config --global user.name "Vault Architect"
+          git config --global user.email "s.vohra1991@gmail.com"
+          git add .
+          git commit -m "Molt: New Daily Tool Generated 🦞" || echo "No changes to commit"
+          git push
